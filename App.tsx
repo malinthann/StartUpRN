@@ -1,4 +1,4 @@
-import boot from './boot';
+import boot from './boot'
 
-const app = boot();
-export default app;
+const app = boot()
+export default app

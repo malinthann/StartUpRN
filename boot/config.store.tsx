@@ -1,4 +1,4 @@
 function config() {
-	return {};
+  return {}
 }
 export default config

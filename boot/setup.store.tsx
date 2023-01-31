@@ -1,16 +1,16 @@
-import { Provider } from 'mobx-react';
-import * as React from 'react';
-import { ActivityIndicator, LogBox, Platform, StatusBar } from 'react-native';
+import { Provider } from 'mobx-react'
+import * as React from 'react'
+import { ActivityIndicator, LogBox, Platform, StatusBar } from 'react-native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import _styles from '@styles'
 // Lazy load component
-const Routes = React.lazy(() => import("routes"))
+const Routes = React.lazy(() => import('routes'))
 
-export interface Props { }
+export interface Props {}
 
 export interface State {
-  ready: boolean;
+  ready: boolean
 }
 
 LogBox.ignoreLogs(['Warning: componentWill'])

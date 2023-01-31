@@ -19,10 +19,10 @@ module.exports = (plop) => {
       },
     ],
     actions(data) {
-      const allcap = capitalizeWords(data.name.split("/"));
-      const filename = allcap.pop();
-      const path = [allcap.join("/"), filename].join("/");
-      if (!filename) throw new Error("No filename provided");
+      const allcap = capitalizeWords(data.name.split('/'))
+      const filename = allcap.pop()
+      const path = [allcap.join('/'), filename].join('/')
+      if (!filename) throw new Error('No filename provided')
       return [
         {
           type: 'add',
@@ -40,7 +40,7 @@ module.exports = (plop) => {
           templateFile: 'plop-templates/fun-screen-template/style.tsx.hbs',
         },
       ]
-    }
+    },
   })
 
   plop.setGenerator('screen', {
@@ -54,10 +54,10 @@ module.exports = (plop) => {
       },
     ],
     actions(data) {
-      const allcap = capitalizeWords(data.name.split("/"));
-      const filename = allcap.pop();
-      const path = [allcap.join("/"), filename].join("/");
-      if (!filename) throw new Error("No filename provided");
+      const allcap = capitalizeWords(data.name.split('/'))
+      const filename = allcap.pop()
+      const path = [allcap.join('/'), filename].join('/')
+      if (!filename) throw new Error('No filename provided')
       return [
         {
           type: 'add',
@@ -75,7 +75,7 @@ module.exports = (plop) => {
           templateFile: 'plop-templates/screen-template/style.tsx.hbs',
         },
       ]
-    }
+    },
   })
 
   plop.setGenerator('component', {
@@ -89,10 +89,10 @@ module.exports = (plop) => {
       },
     ],
     actions(data) {
-      const allcap = capitalizeWords(data.name.split("/"));
-      const filename = allcap.pop();
-      const path = [allcap.join("/"), filename].join("/");
-      if (!filename) throw new Error("No filename provided");
+      const allcap = capitalizeWords(data.name.split('/'))
+      const filename = allcap.pop()
+      const path = [allcap.join('/'), filename].join('/')
+      if (!filename) throw new Error('No filename provided')
       return [
         {
           type: 'add',
@@ -100,10 +100,16 @@ module.exports = (plop) => {
           templateFile: 'plop-templates/component.tsx.hbs',
         },
       ]
-    }
+    },
   })
 }
 
 function capitalizeWords(arr) {
-  return arr.map(element => element.split(/\s/g).filter(a => a).map(world => world.charAt(0).toUpperCase() + world.substring(1).toLowerCase()).join(""));
+  return arr.map((element) =>
+    element
+      .split(/\s/g)
+      .filter((a) => a)
+      .map((world) => world.charAt(0).toUpperCase() + world.substring(1).toLowerCase())
+      .join(''),
+  )
 }
